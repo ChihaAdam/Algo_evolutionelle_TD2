@@ -24,8 +24,14 @@ def calcul_fitness(generation, capacites_unites, demande, capacite_totale):
     return [evaluer(ind, capacites_unites, demande, capacite_totale) for ind in generation]
 
 def croisement(p1, p2):
-    point = randint(1, len(p1) - 1)
-    return p1[:point] + p2[point:], p2[:point] + p1[point:]
+    a,b= randint(1,len(p1)-1), randint(1,len(p2)-1)
+    while (a==b):
+        a,b= randint(1,len(p1)-1), randint(1,len(p2)-1)
+    point1 = min(a,b)
+    point2 = max(a,b)
+    fils1 = p1[:point1] + p2[point1:point2] + p1[point2:]
+    fils2 = p2[:point1] + p1[point1:point2] + p2[point2:]
+    return fils1,fils2
 
 def mutation(chromosome, probabilite_mutation=10**(-2)):
     resultat = []

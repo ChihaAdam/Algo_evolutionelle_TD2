@@ -4,7 +4,7 @@ def f(s,villes):
     somme = 0
     for i in range(len(villes)):
         a = s[i] - 1
-        b = s[(i+1)%len(villes)] -1 # retourner au point de départ
+        b = s[(i+1)%len(villes)] -1 
         if villes[a][b]==-1 :
             return float("inf")
         curr = villes[a][b]
