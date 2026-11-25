@@ -41,9 +41,8 @@ def tabou(initial,villes,iters,taille_tabou):
     return s
 
 def main():
-    def main():
-        initial = [1, 2, 3, 4, 5, 6, 7, 8]
-        villes = [
+    initial = [1, 2, 3, 4, 5, 6, 7, 8]
+    villes = [
             [-1, 14, 15, -1, -1, -1, -1, 17],
             [14, -1, 13, 14, 20, -1, -1, 21],
             [15, 13, -1, 11, 21, 17, 9, 9],
@@ -52,10 +51,10 @@ def main():
             [-1, -1, 17, 10, 15, -1, 9, -1],
             [-1, -1, 9, 8, 18, 9, 9, -1, 13],
             [17, 21, 9, 20, -1, -1, 13, -1]
-        ]
-        s = tabou(initial, villes, 5)
-        print(f"le chemin est {s}")
-        print(f"le cout est {f(s, villes)}")
+    ]
+    s = tabou(initial, villes, 5)
+    print(f"le chemin est {s}")
+    print(f"le cout est {f(s, villes)}")
 
     if __name__ == "__main__":
         main()
